@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="script.js" defer></script>
     <title>Admin Dashboard</title>
@@ -12,22 +13,20 @@
     <div class="container">
         <div class="header">
             <div class="first-header-row">
-                <div id="search">
-                    <label for="search-bar">Search:</label>
                     <input type="search" name="search" id="search-bar">
-                        </div>
-                    <div id="contact"> 
-                        <button>Ping</button>
-                        <img src="#"">
-                        <p>Username</p>
-                    </div>
+                        <button id="ping">Ping</button>
+                        <img src="#" id="profile-pic">
+                        <p id="header-username">Username</p>
+                    
+                </div>
+
                     <div class="second-header-row">
                         <img src="#">
                         <h2>Username (@username)</h2>
                         <button>New</button>
                         <button>Upload</button>
                         <button>Share</button>
-                    </div>
+                
             </div>
             
         </div>
@@ -64,8 +63,28 @@
             </div>
             <div class="content-sidebar">
                 <div class="announcements">
+                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
+                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
+                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
                 </div>
-                <div class="trending"></div>
+                <div class="trending-user">
+                    <div id="user-one">
+                        <img src="#">
+                        <p>Username</p>
+                    </div>
+                    <div id="user-two">
+                        <img src="#">
+                        <p>Username</p>
+                    </div>
+                    <div id="user-three">
+                        <img src="#">
+                        <p>Username</p>
+                    </div>
+                    <div id="user-four">
+                        <img src="#">
+                        <p>Username</p>
+                    </div>
+                </div>
             </div>
 
         </div>

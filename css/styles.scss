@@ -1,0 +1,17 @@
+@import "./header";
+@import "./container";
+@import "./main-content";
+@import "./sidebar";
+@import "./mixins";
+@import "./variables";
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    height: 100vh;
+    width: 100vw;
+    gap: 20px;
+}
+
