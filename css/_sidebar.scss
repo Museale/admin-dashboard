@@ -1,4 +1,11 @@
+@import "./variables";
+@import "./mixins";
+
+
 .sidebar {
+    margin: 0; 
+    padding: 1rem;
+    background: $background-colour-1;
     ul, li, a {
         list-style-type: none;
         text-decoration: none;
@@ -7,12 +14,29 @@
         gap: 20px;
         justify-content: flex-start;
         align-items: flex-start;
+        color: white;
+        margin-bottom: 5px;
+        :hover {
+            transform: scale(1.1);
+            transition: 0.3s ease-in-out;
+        }
         }
 
     grid-column: 1fr;
     grid-row: 1 / -1;
 
 }
+
+
+    #home {
+        background-image: url("./house\ \(1\).png");
+        @include center-icon;
+    }
+       
+
+
+
+
 
 .dash-title{
     text-align: center;
