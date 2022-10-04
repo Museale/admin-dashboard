@@ -1,7 +1,6 @@
 @import "./variables";
 @import "./mixins";
 
-
 .sidebar {
     margin: 0; 
     padding: 1rem;
@@ -21,21 +20,51 @@
             transition: 0.3s ease-in-out;
         }
         }
-
     grid-column: 1fr;
     grid-row: 1 / -1;
-
 }
 
 
+.side-menu li {
+    @include center-icon;
     #home {
-        background-image: url("./house\ \(1\).png");
-        @include center-icon;
+        background-image: url(./profile-img/home.png);
     }
-       
+    
+    #profile {
+        background-image: url(./profile.png);
+    }
+    
+    #messages {
+        background-image: url(./profile-img/chat.png);
+    }
+    
+    #history {
+        background-image: url(./profile-img/poem.png);
+        background-size: 22%;
+    }
+    
+    #tasks {
+        background-image: url(./profile-img/to-do-list.png);
+        background-size: 28%;
+    }
+    
+    #communities {
+        background-image: url(./profile-img/community.png);
+    }
+    
+    #settings {
+        background-image: url(./profile-img/settings.png);
+        background-size: 22%;
+    }
+    #support {
+        background-image: url();
+    }
+    #privacy {
+        background-image: url();
+    }
 
-
-
+}
 
 
 .dash-title{

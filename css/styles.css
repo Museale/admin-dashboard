@@ -176,11 +176,50 @@ h3 {
   transition: 0.3s ease-in-out;
 }
 
-#home {
-  background-image: url("./house (1).png");
+.side-menu li {
   background-position: left center;
   background-repeat: no-repeat;
-  padding-left: 20px;
+  padding-left: 30px;
+  background-size: 22px;
+}
+
+.side-menu li #home {
+  background-image: url(./profile-img/home.png);
+}
+
+.side-menu li #profile {
+  background-image: url(./profile.png);
+}
+
+.side-menu li #messages {
+  background-image: url(./profile-img/chat.png);
+}
+
+.side-menu li #history {
+  background-image: url(./profile-img/poem.png);
+  background-size: 22%;
+}
+
+.side-menu li #tasks {
+  background-image: url(./profile-img/to-do-list.png);
+  background-size: 28%;
+}
+
+.side-menu li #communities {
+  background-image: url(./profile-img/community.png);
+}
+
+.side-menu li #settings {
+  background-image: url(./profile-img/settings.png);
+  background-size: 22%;
+}
+
+.side-menu li #support {
+  background-image: url();
+}
+
+.side-menu li #privacy {
+  background-image: url();
 }
 
 .dash-title {
