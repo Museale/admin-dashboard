@@ -2,10 +2,10 @@
 
 
 .content {
+    grid-row: 3/ -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(autofit,  minmax(50px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 .content > h1 {
     font-size: 20px;
