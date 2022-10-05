@@ -4,6 +4,7 @@
 .sidebar {
     margin: 0; 
     padding: 1rem;
+    height:auto;    
     background: $background-colour-1;
     ul, li, a {
         list-style-type: none;
@@ -27,49 +28,45 @@
 
 .side-menu li {
     @include center-icon;
-    #home {
-        background-image: url(./profile-img/home.png);
-    }
-    
-    #profile {
-        background-image: url(./profile.png);
-    }
-    
-    #messages {
-        background-image: url(./profile-img/chat.png);
-    }
-    
-    #history {
-        background-image: url(./profile-img/poem.png);
-        background-size: 22%;
-    }
-    
-    #tasks {
-        background-image: url(./profile-img/to-do-list.png);
-        background-size: 28%;
-    }
-    
-    #communities {
-        background-image: url(./profile-img/community.png);
-    }
-    
-    #settings {
-        background-image: url(./profile-img/settings.png);
-        background-size: 22%;
-    }
-    #support {
-        background-image: url();
-    }
-    #privacy {
-        background-image: url();
-    }
+}
 
+#home {
+    background-image: url(./profile-img/home.png);
+}
+#profile {
+    background-image: url(./profile-img/profile.png);
+}
+#messages {
+    background-image: url(./profile-img/chat.png);
+}
+#history {
+    background-image: url(./profile-img/poem.png);
+    background-size: 22%;
+}
+#tasks {
+    background-image: url(./profile-img/to-do-list.png);
+    background-size: 28%;
+}   
+#communities {
+    background-image: url(./profile-img/community.png);
+}
+
+#settings {
+    background-image: url(./profile-img/settings.png);
+    background-size: 22%;
+}
+#support {
+    background-image: url(./profile-img/technical-support.png);
+}
+#privacy {
+    background-image: url(./profile-img/privacy.png);
 }
 
 
 .dash-title{
     text-align: center;
 }
+
 .logo {
     display: flex;
     flex-direction: row;

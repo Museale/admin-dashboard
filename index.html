@@ -13,7 +13,8 @@
     <div class="container">
         <div class="header">
             <div class="first-header-row">
-                    <input type="search" name="search" id="search-bar">
+                <label for="searc-bar">🔎</label>
+                <input type="search" name="search" id="search-bar">
                         <button id="ping">Ping</button>
                         <img src="#" id="profile-pic">
                         <p id="header-username">Username</p>
@@ -21,7 +22,8 @@
                 </div>
 
                     <div class="second-header-row">
-                        <img src="#">
+                        <img src="./css/profile-img/woman (2).png" width="72px">
+                        <p>Hello there,</p>
                         <h2>Username (@username)</h2>
                         <button>New</button>
                         <button>Upload</button>
@@ -31,7 +33,7 @@
             
         </div>
         <div class="sidebar">
-            <div class="logo"><img src="css/lama-no-circ.svg"><h1 class="dash-title">Dashboard</h1></div>
+            <div class="logo"><img src="./css/profile-img/lama-no-circ.svg"><h1 class="dash-title">Dashboard</h1></div>
             <nav>
                 <ul id="main-menu" class="side-menu">
                         <li id="home">
@@ -52,40 +54,59 @@
         <div class="content">
             <h1>Your Projects</h1>
             <div class="posts">
-                <div class="card" id="card-one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eligendi atque, earum a nam, quas soluta excepturi quidem numquam, ipsum provident? Velit temporibus, ipsam sapiente numquam quisquam repellendus hic sequi!</div>
-                <div class="card" id="card-two">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quibusdam aut animi libero natus cupiditate dolorum similique illum, ea, dolor quasi amet provident quas sapiente iure quisquam hic nihil totam.</div>
-                <div class="card" id="card-three">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur maxime optio natus a. Autem error, architecto ipsa consectetur sit recusandae. Saepe impedit, tenetur facilis natus perferendis ducimus fuga reprehenderit!</div>
-                <div class="card" id="card-four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate earum ducimus eligendi eos accusantium a doloribus reiciendis ea. Explicabo exercitationem architecto nemo provident molestias ducimus rerum obcaecati ea, fugiat commodi.</div>
-                <div class="card" id="card-five">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quibusdam molestiae beatae soluta, nostrum, ut delectus mollitia vero maxime natus ipsam illo repellat enim labore, laboriosam eum totam perspiciatis saepe?</div>
-                <div class="card" id="card-six">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi numquam accusamus consequuntur, sint facere possimus praesentium? Praesentium perspiciatis temporibus ut animi ipsum, sed fugiat quaerat dolorem, ducimus id ipsa laudantium.</div>
+                <div class="card" id="card-one">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eligendi atque, earum a nam, quas soluta excepturi quidem numquam, ipsum provident? Velit temporibus, ipsam sapiente numquam quisquam repellendus hic sequi!</p>
+                </div>
+                <div class="card" id="card-two">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quibusdam aut animi libero natus cupiditate dolorum similique illum, ea, dolor quasi amet provident quas sapiente iure quisquam hic nihil totam.</p>
+                </div>
+                <div class="card" id="card-three">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur maxime optio natus a. Autem error, architecto ipsa consectetur sit recusandae. Saepe impedit, tenetur facilis natus perferendis ducimus fuga reprehenderit!</p>
+                </div>
+                <div class="card" id="card-four">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate earum ducimus eligendi eos accusantium a doloribus reiciendis ea. Explicabo exercitationem architecto nemo provident molestias ducimus rerum obcaecati ea, fugiat commodi.</p>
+                </div>
+                <div class="card" id="card-five">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quibusdam molestiae beatae soluta, nostrum, ut delectus mollitia vero maxime natus ipsam illo repellat enim labore, laboriosam eum totam perspiciatis saepe?</p>
+                </div>
+                <div class="card" id="card-six">
+                    <h5>Lorem, ipsum dolor.</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi numquam accusamus consequuntur, sint facere possimus praesentium? Praesentium perspiciatis temporibus ut animi ipsum, sed fugiat quaerat dolorem, ducimus id ipsa laudantium.</p>
+                </div>
             </div>
-        
-                <div class="announcements">
-                    <h3>Announcements</h3>
-                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
-                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
-                    <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
-                </div>
-              
-                <div class="trending-user">
+        <div id="content-sidebar">
+            <h3>Announcements</h3>
+                    <div class="announcements">
+                        <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
+                        <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
+                        <div class="announcement-post"><h3>Announcement title</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, blanditiis.</p></div>
+                    </div>
                     <h3>Trending</h3>
-                    <div id="user-one" class="user">
-                        <img src="#">
-                        <p>Username</p>
+                    <div class="trending-user">
+            
+                        <div id="user-one" class="user">
+                            <img src="./css/profile-img/man (1).png" class="profile-img">
+                            <h4>@Fedêrico</h4>
+                        </div>
+                        <div id="user-two" class="user">
+                            <img src="./css/profile-img/woman (2).png" class="profile-img">
+                            <p>Username</p>
+                        </div>
+                        <div id="user-three" class="user">
+                            <img src="./css/profile-img/man (2).png" class="profile-img">
+                            <p>Username</p>
+                        </div>
+                        <div id="user-four" class="user">
+                            <img src="./css/profile-img/woman (3).png" class="profile-img">
+                            <p>Username</p>
+                        </div>
                     </div>
-                    <div id="user-two" class="user">
-                        <img src="#">
-                        <p>Username</p>
-                    </div>
-                    <div id="user-three" class="user">
-                        <img src="#">
-                        <p>Username</p>
-                    </div>
-                    <div id="user-four" class="user">
-                        <img src="#">
-                        <p>Username</p>
-                    </div>
-                </div>
+        </div>
             </div>
 
         </div>
