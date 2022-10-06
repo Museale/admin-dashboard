@@ -12,15 +12,8 @@
 body {
     background-color: $primary-colour;
 }
-.container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows:repeat(auto-fill, minmax(10vh, 1fr));
-    height: 100vh;
-    width: auto;
-    gap: 40px;
-    padding: 0;
-}
+
+
 
 
 
