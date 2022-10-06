@@ -1,55 +1,70 @@
 @import "./variables";
-
+@import "./mixins";
 
 .content {
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 10px;
-    padding-top: 0;
+    grid-template-rows: 20px 1fr;
+    gap: 40px;
+    margin-right: 40px;
+    padding-top: 1rem;
     margin-top: 0;
 }
 .content > h1 {
+    grid-row: 1;
     font-size: 20px;
+    padding: 0;
+    margin: 0;
+
 }
 
 
 .posts {
+    grid-row: 2 /-1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: flex-start;
     gap: 30px;
+    button {
+        @include button-align;
+
+    }
 }
 
 .card {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
     border-left: 6px solid $secondary-colour-saturated;
     border-radius: 5px;
-    min-height: 130px;
+    min-height: 190px;
+    max-height: 190px;
     padding: 1rem;
     background-color: white;
 }
 
 #content-sidebar {
-    grid-row: 1 / span 2; 
+    grid-row: 2 /span 2;
     grid-column: 2;
     border-radius: 5px;
-    padding: 1rem;
+    
     .announcements {
+        grid-row: 2 / 3;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
         padding: 1rem;
         background-color: white;
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 5px;
+        padding: 1rem;
+
     }
     .announcement-post:nth-child(2) {
         border-top: 1px solid $background-colour-1;
         border-bottom: 1px solid $background-colour-1;   
     }
-}
-
-
-h3 {
-    text-align: center;
+    .sidebar-title:nth-child(1) {
+        position: absolute;
+        margin-top: -25px;
+    }    
 }
 
 .trending-user {
@@ -61,7 +76,10 @@ h3 {
     background-color: white;
     .user {
         display: flex;
-        
+        align-items: center;
+        justify-content: center;
+        padding: 0.65rem;
+
     }
 }
 
@@ -71,3 +89,10 @@ h3 {
     padding: 0.5rem;
 }
 
+.post-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+}

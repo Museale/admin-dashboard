@@ -3,7 +3,6 @@
 
 .sidebar {
     grid-column: 1 / span -1;
-    
     margin: 0; 
     padding: 0.5rem;
     padding-top: 1rem;
@@ -23,7 +22,6 @@
             transition: 0.3s ease-in-out;
         }
         }
-
     grid-column: 1;
     grid-row: 1 / -1;
 }
