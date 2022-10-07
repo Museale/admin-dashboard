@@ -2,6 +2,12 @@
 @import "./mixins";
 
 .sidebar {
+    grid-column: 1 / span -1;
+    grid-row: 1 / -1;
+    margin: 0; 
+    padding: 1.5rem;
+    padding-top: 1rem;
+    background: $background-colour-1;
     img:hover {
         transform: rotate(160deg);
         transition: ease-in-out 1s;
@@ -10,68 +16,24 @@
     h1 {
         font-weight: bold;
     }
-    grid-column: 1 / span -1;
-    margin: 0; 
-    padding: 1.5rem;
-    padding-top: 1rem;
-    background: $background-colour-1;
+
     ul, li, a {
         list-style-type: none;
         text-decoration: none;
         font-weight: bold;
-        display: flex;
-        flex-flow: column nowrap;
-        padding: 5px;
-        
-        justify-content: flex-start;
-        align-items: flex-start;
+        padding: 10px;
         color: white;
-        margin-bottom: 8px;        :hover {
+        margin-bottom: 8px;         
+          :hover {
             transform: scale(1.1);
             transition: 0.3s ease-in-out;
+            }
         }
-        }
-    grid-column: 1;
-    grid-row: 1 / -1;
 }
-
 
 .side-menu li {
     @include center-icon;
 }
-
-#home {
-    background-image: url(./profile-img/home.png);
-}
-#profile {
-    background-image: url(./profile-img/profile.png);
-}
-#messages {
-    background-image: url(./profile-img/chat.png);
-}
-#history {
-    background-image: url(./profile-img/poem.png);
-    background-size: 22%;
-}
-#tasks {
-    background-image: url(./profile-img/to-do-list.png);
-    background-size: 28%;
-}   
-#communities {
-    background-image: url(./profile-img/community.png);
-}
-
-#settings {
-    background-image: url(./profile-img/settings.png);
-    background-size: 22%;
-}
-#support {
-    background-image: url(./profile-img/technical-support.png);
-}
-#privacy {
-    background-image: url(./profile-img/privacy.png);
-}
-
 
 .dash-title{
     text-align: center;
@@ -92,3 +54,33 @@
 #main-menu {
     margin-top: 60px;
 }
+
+#home {
+    background-image: url(./icons/home-outline.svg);
+}
+#profile {
+    background-image: url(./icons/account-outline.svg);
+}
+#messages {
+    background-image: url(./icons/message-processing-outline.svg);
+}
+#history {
+    background-image: url(./icons/weather-cloudy-clock.svg);
+}
+#tasks {
+    background-image: url(./icons/calendar-check-outline.svg);
+}   
+#communities {
+    background-image: url(./icons/account-group-outline.svg);
+}
+
+#settings {
+    background-image: url(./icons/cog-outline.svg);
+}
+#support {
+    background-image: url(./icons/lifebuoy.svg);
+}
+#privacy {
+    background-image: url(./icons/shield-lock-outline.svg);
+}
+

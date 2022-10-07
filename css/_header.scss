@@ -1,104 +1,92 @@
 @import "./variables";
 
-
 .header {
     grid-column: 2;
     grid-row: 1;
     justify-content: center;
     padding: 1rem 0 2rem 0;
+    margin-right: 40px;    
+ }
 
-}
  .first-header-row {
     grid-row: 1;
     display: grid;
     grid-template-columns: 8px 2fr repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
     grid-template-rows: 1fr;
     align-content: center;
     align-items: center;
+    padding-bottom: 1rem;
+
+        #search-bar{
+            grid-row: 1;
+            grid-column: 2/ span 3;
+            appearance: none;
+            outline: 2px $background-colour-1 solid;
+            grid-column: 2 / span 3;  
+            border-radius: 15px;
+            border: 1px solid $secondary-colour-saturated;
+            padding: 5px;
+            :hover {
+                background: $background-colour-2;
+            }
+        }
+
+        #ping {
+            grid-row: 1;
+            grid-column-start: 5;
+            justify-self: end;
+            margin-right: 20px;
+            width: 26px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        #profile-pic {
+            grid-column-start: 6;
+            align-items: end;
+            justify-self: end;
+        }
+
+        #header-username {
+            grid-column-start: 7;
+            justify-self: end;
+        }
 }
-
- .header {
-    margin-right: 40px;
-
-    #search-bar{
-        grid-row: 1;
-        grid-column: 2/ span 3;
-    }
-
-    #ping {
-        grid-row: 1;
-        grid-column-start: 5;
-        justify-self: end;
-       
-
-    
-    }
-    #profile-pic {
-        grid-column-start: 6;
-        align-items: end;
-        justify-self: end;
-       
-
-    }
-  
-    #header-username {
-        grid-column-start: 7;
-        justify-self: end;
-     
-    }
- }
 
 .second-header-row {
     grid-row: 1;
+    grid-column: 1 / span auto;
     display: grid;
-    grid-template-columns:  82px 6fr repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns:  82px 3fr 10% repeat(3, 1fr);
+    grid-template-rows: 80px 80px;
     align-content: center;
-    align-items:flex-end;
-    p {
-        position: absolute;
-        align-self: flex-start;
-        margin-left: 122px;
+    align-items: end;
+        #hello-user {
+            grid-row: 1 / 2;
+            grid-column: 2;
+            align-self: center;
+            justify-self: start;
+        }
+        #second-header-row-btn {
+            grid-column: 4 / -1;
+            grid-row: 1 / 1;
+            justify-self: end;
+            align-self: center;
+            button {
+                align-self: center;
+                justify-self: end;
+                appearance: none;
+                outline: none;
+                grid-auto-flow: row dense;
+                width: clamp(38px, 78px, 100px);
+                border-radius: 15px;
+                padding: 5px;
+                background-color: $background-colour-1;
+                border: 1px $secondary-colour-lowsat solid;
+                color: white;
+                text-shadow: 1px 1px 1px    $background-colour-1;
+            }
     }
-    button {
-        align-self: center;
-        justify-self: end;
-        appearance: none;
-        outline: none;
-        width: 78px;
-        border-radius: 15px;
-        padding: 5px;
-        background-color: $background-colour-1;
-        border: 1px $secondary-colour-lowsat solid;
-
-        color: white;
-        text-shadow: 1px 1px 1px    $background-colour-1;
-    }
-}
-
-button:hover {
-        cursor: pointer;
-        transform: scale(1.2);
-        transition: 0.2s ease-in-out;
-}
-
-
-
-#search-bar {
-    appearance: none;
-    outline: 2px $background-colour-1 solid;
-    grid-column: 2 / span 3;  
-    border-radius: 15px;
-    border: 1px solid $secondary-colour-saturated;
-    padding: 5px;
-}
-
-
-
-#ping {
-    width: 26px;
-    background: none;
-    border: none;
-    padding: 5px;
 }

@@ -10,13 +10,12 @@
     margin-right: 40px;
     padding-top: 1rem;
     margin-top: 0;
+        h1 {
+            grid-row: 1;
+            font-size: 20px;
+            padding: 0;
+        }
 }
-.content > h1 {
-    grid-row: 1;
-    font-size: 20px;
-    padding: 0;
-}
-
 
 .posts {
     grid-row: 2 /-1;
@@ -30,12 +29,11 @@
     @include box-shadow;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 40px repeat(2, 1fr);
     border-left: 6px solid $secondary-colour-saturated;
     border-radius: 5px;
     min-height: 200px;
     max-height: 200px;
-
     padding: 1rem;
     background-color: white;
     p {
@@ -47,6 +45,7 @@
         grid-row: 3;
         justify-self: end;
         padding: 1rem;
+
         button {
             border: none;
             background: none;
@@ -66,8 +65,7 @@
         background-color: white;
         font-size: 12px;
         border-radius: 5px;
-        padding: 1rem;
-
+        padding: 1.5rem;
     }
     .announcement-post:nth-child(2) {
         border-top: 1px solid $background-colour-1;
@@ -77,25 +75,24 @@
         position: absolute;
         margin-top: -40px;
     }    
-}
-
-.trending-user {
-    @include box-shadow;
-    grid-row: 3 / auto;
-    grid-column: 2;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: white;
-    .user {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .trending-user {
+        @include box-shadow;
+        grid-row: 3 / auto;
+        grid-column: 2;
         padding: 1rem;
+        border-radius: 5px;
+        background-color: white;
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0.8rem;
+        }
+        .profile-img {
+            width: 48px;
+            height: auto;
+            padding: 0.5rem;
+        }    
     }
 }
 
-.profile-img {
-    width: 48px;
-    height: auto;
-    padding: 0.5rem;
-}
