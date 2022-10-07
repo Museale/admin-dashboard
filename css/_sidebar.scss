@@ -2,18 +2,27 @@
 @import "./mixins";
 
 .sidebar {
+    img:hover {
+        transform: rotate(160deg);
+        transition: ease-in-out 1s;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
     grid-column: 1 / span -1;
     margin: 0; 
-    padding: 0.5rem;
+    padding: 1.5rem;
     padding-top: 1rem;
     background: $background-colour-1;
- 
     ul, li, a {
         list-style-type: none;
         text-decoration: none;
+        font-weight: bold;
         display: flex;
         flex-flow: column nowrap;
-        gap: 20px;
+        padding: 5px;
+        
         justify-content: flex-start;
         align-items: flex-start;
         color: white;

@@ -15,41 +15,53 @@
     grid-row: 1;
     font-size: 20px;
     padding: 0;
-    margin: 0;
-
 }
 
 
 .posts {
     grid-row: 2 /-1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     align-items: flex-start;
     gap: 30px;
-    button {
-        @include button-align;
-
-    }
 }
 
 .card {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+    @include box-shadow;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     border-left: 6px solid $secondary-colour-saturated;
     border-radius: 5px;
-    min-height: 190px;
-    max-height: 190px;
+    min-height: 200px;
+    max-height: 200px;
+
     padding: 1rem;
     background-color: white;
+    p {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .post-btn {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: end;
+        padding: 1rem;
+        button {
+            border: none;
+            background: none;
+        }
+    }
 }
 
 #content-sidebar {
-    grid-row: 2 /span 2;
+    grid-row: 2 / span 5;
     grid-column: 2;
     border-radius: 5px;
     
     .announcements {
         grid-row: 2 / 3;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+        @include box-shadow;
         padding: 1rem;
         background-color: white;
         font-size: 12px;
@@ -63,36 +75,27 @@
     }
     .sidebar-title:nth-child(1) {
         position: absolute;
-        margin-top: -25px;
+        margin-top: -40px;
     }    
 }
 
 .trending-user {
-    grid-row: 3;
+    @include box-shadow;
+    grid-row: 3 / auto;
     grid-column: 2;
     padding: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.603);
     border-radius: 5px;
     background-color: white;
     .user {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.65rem;
-
+        padding: 1rem;
     }
 }
 
 .profile-img {
     width: 48px;
-    aspect-ratio: 1;
+    height: auto;
     padding: 0.5rem;
-}
-
-.post-btn {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 30px;
-    margin-top: 30px;
 }

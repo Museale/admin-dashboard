@@ -2,21 +2,21 @@
   grid-column: 2;
   grid-row: 1;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0 2rem 0;
 }
 
 .first-header-row {
   grid-row: 1;
   display: grid;
-  grid-template-columns: 5px 2fr repeat(3, 1fr);
+  grid-template-columns: 8px 2fr repeat(3, 1fr);
+  gap: 15px;
   grid-template-rows: 1fr;
   align-content: center;
   align-items: center;
 }
 
-.header label {
-  justify-self: end;
-  padding: 1rem;
+.header {
+  margin-right: 40px;
 }
 .header #search-bar {
   grid-row: 1;
@@ -26,18 +26,15 @@
   grid-row: 1;
   grid-column-start: 5;
   justify-self: end;
-  padding: 0.5rem;
 }
 .header #profile-pic {
   grid-column-start: 6;
   align-items: end;
   justify-self: end;
-  padding: 0.5rem;
 }
 .header #header-username {
   grid-column-start: 7;
   justify-self: end;
-  padding: 0.5rem;
 }
 
 .second-header-row {
@@ -86,9 +83,16 @@ button:hover {
   padding: 5px;
 }
 
+#ping {
+  width: 26px;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 2fr 8fr;
   grid-template-rows: 120px repeat(auto-fill, minmax(100px, 1fr));
   min-height: 100vh;
   width: auto;
@@ -111,34 +115,51 @@ button:hover {
   grid-row: 1;
   font-size: 20px;
   padding: 0;
-  margin: 0;
 }
 
 .posts {
   grid-row: 2/-1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   align-items: flex-start;
   gap: 30px;
 }
+
 .card {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+  box-shadow: 2px 2px 5px rgba(46, 196, 181, 0.3882352941);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   border-left: 6px solid #FF9F1C;
   border-radius: 5px;
-  min-height: 190px;
-  max-height: 190px;
+  min-height: 200px;
+  max-height: 200px;
   padding: 1rem;
   background-color: white;
 }
+.card p {
+  grid-column: 1/span 2;
+  grid-row: 2;
+}
+.card .post-btn {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: end;
+  padding: 1rem;
+}
+.card .post-btn button {
+  border: none;
+  background: none;
+}
 
 #content-sidebar {
-  grid-row: 2/span 2;
+  grid-row: 2/span 5;
   grid-column: 2;
   border-radius: 5px;
 }
 #content-sidebar .announcements {
   grid-row: 2/3;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+  box-shadow: 2px 2px 5px rgba(46, 196, 181, 0.3882352941);
   padding: 1rem;
   background-color: white;
   font-size: 12px;
@@ -151,14 +172,14 @@ button:hover {
 }
 #content-sidebar .sidebar-title:nth-child(1) {
   position: absolute;
-  margin-top: -25px;
+  margin-top: -40px;
 }
 
 .trending-user {
-  grid-row: 3;
+  box-shadow: 2px 2px 5px rgba(46, 196, 181, 0.3882352941);
+  grid-row: 3/auto;
   grid-column: 2;
   padding: 1rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.603);
   border-radius: 5px;
   background-color: white;
 }
@@ -166,38 +187,38 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem;
+  padding: 1rem;
 }
 
 .profile-img {
   width: 48px;
-  aspect-ratio: 1;
+  height: auto;
   padding: 0.5rem;
-}
-
-.post-btn {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 30px;
-  margin-top: 30px;
 }
 
 .sidebar {
   grid-column: 1/span -1;
   margin: 0;
-  padding: 0.5rem;
+  padding: 1.5rem;
   padding-top: 1rem;
   background: #2EC4B6;
   grid-column: 1;
   grid-row: 1/-1;
 }
+.sidebar img:hover {
+  transform: rotate(160deg);
+  transition: ease-in-out 1s;
+}
+.sidebar h1 {
+  font-weight: bold;
+}
 .sidebar ul, .sidebar li, .sidebar a {
   list-style-type: none;
   text-decoration: none;
+  font-weight: bold;
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  padding: 5px;
   justify-content: flex-start;
   align-items: flex-start;
   color: white;
@@ -280,4 +301,5 @@ button:hover {
 
 body {
   background-color: #CBF3F0;
+  max-width: 1400px;
 }/*# sourceMappingURL=styles.css.map */
